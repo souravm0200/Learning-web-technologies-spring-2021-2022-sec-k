@@ -1,1 +1,1 @@
-# tLearning-web-technologies-spring-2021-2022-sec-k
+# Learning-web-technologies-spring-2021-2022-sec-k
