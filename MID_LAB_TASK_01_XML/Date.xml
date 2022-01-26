@@ -1,0 +1,40 @@
+<date>
+	<student>
+		
+		<SL._No>23</SL._No>
+		<NAME>John Carter</NAME>
+		
+		<ADMISSION_DATE>
+			<DD>25</DD>
+			<MM>12</MM>
+			<YYYY>2015</YYYY>		
+		</ADMISSION_DATE>
+	
+	</student>
+
+	<student>
+		
+		<SL._No>29</SL._No>
+		<NAME>Bob Marshal</NAME>
+		
+		<ADMISSION_DATE>
+			<DD>13</DD>
+			<MM>01</MM>
+			<YYYY>1999</YYYY>		
+		</ADMISSION_DATE>
+	
+	</student>
+
+	<student>
+		
+		<SL._No>35</SL._No>
+		<NAME>Clark Kent</NAME>
+		
+		<ADMISSION_DATE>
+			<DD>17</DD>
+			<MM>06</MM>
+			<YYYY>2005</YYYY>		
+		</ADMISSION_DATE>
+	
+	</student>
+</date>
