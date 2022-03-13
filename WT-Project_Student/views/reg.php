@@ -2,33 +2,32 @@
 <html>
 <head>
 	
-	<title>X Company</title>
+	<title>A.N.S   SCHOOL</title>
 </head>
 
-<style>
-	.topright {
-  position: absolute;
-  top: 8px;
-  right: 100px;
-  font-size: 16px;
-}
+
 </style>
 
-<fieldset>
+
 
 <body>
-	<form method="POST" action="regCheck.php">
-          <h1>XCOMPANY</h1> 
-	        <div class="topright"><a href="home.php"> Home |</a> <a href="login.php"> Login |</a> <a href="registration.php">Registration </a></div>
+    <h1>A.N.S    SCHOOL</h1> 
 
+	<form method="POST" action="../controllers/regCheck.php" enctype="multipart/form-data">
+            
+	        <a href="Login.php">Back</a>
+  
 
 	   <fieldset style="width:500px">
-	   	<legend>Registration</legend>
+	   	<legend>Regeistration</legend>
+ 
+		      <table>
+		      	<tr>
+		      		<td></td>
+		      		<td><input type="file" name="image"></td>
+		      	</tr>
 
-		                        
-              
-        <table>
-        	<tr>
+		     <tr>
         		<td>Name</td>
         		<td><input type="text" name="name" value=""><hr></td>
 
@@ -47,18 +46,14 @@
 				<td>Password</td>
 				<td><input type="password" name="password" value=""><hr></td>
 			</tr>
-			<tr>
-				<td>Confirm Password</td>
-				<td><input type="password" name="confirmPassword" value=""><hr></td>
-			</tr>
 			
 		   <tr>
 		   	<td>
 		   		<fieldset >
 				       <legend>Gender</legend>
-				       <input type="radio" name="gender" value="Male">Male 
+				       <input type="radio" name="gender" value="Male">Male  
 					    <input type="radio" name="gender" value="Female">Female 
-					    <input type="radio" name="gender" value="Others">Other
+					    <input type="radio" name="gender" value="Others">Others
 			      </fieldset><hr>
 				</td>
 			</tr>
@@ -67,7 +62,7 @@
 				<td>
 					<fieldset>
 						<legend>Date of Birth</legend>
-						<input type="Date" name="dob" value="">
+						<input type="date" name="dob" value="">
 						
 					</fieldset><hr>
 				</td>
@@ -79,12 +74,22 @@
 				<td><input type="reset" name="reset" value="Reset"></td>
 			</tr>
 		      </fieldset>
-		</table>
+			
+		
+		     </table>                   
+              
+        
+		 <img src="../models/School.jpg" alt="A school logo" width="700" height="300">
 		
 	</form>
+	
 	</fieldset>
- 
+
+
 </body>
-</fieldset>
+
+
 
 </html>
+
+
