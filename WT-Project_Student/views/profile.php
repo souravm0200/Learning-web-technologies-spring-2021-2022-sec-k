@@ -55,7 +55,7 @@
                             <td>
                                 :<?=$_SESSION['current_user'][0]?>                     </td>
                             <td>
-                                <img src="../models/student.png" alt="Image" border="0"> <br>
+                                <img src="../assets/student.png" alt="Image" border="0"> <br>
                                 <a href="change_dp.php">Change</a>
                             </td>
                         </tr>
@@ -93,12 +93,13 @@
 
                     </table>
                 </fieldset>
+                <a href="profile.php">Refresh</a>
             </td>
         </tr>
         </tr>
 
     </table>
-           <img src="../models/School.jpg" alt="A school logo" width="700" height="300">
+           <img src="../assets/School.jpg" alt="A school logo" width="700" height="300">
  </fieldset>
 </body>
 

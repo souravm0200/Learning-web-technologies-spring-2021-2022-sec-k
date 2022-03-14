@@ -65,12 +65,12 @@
                             <tr>
                 
                                 <td>Username</td>
-                               <td><input type="text" name="username" value=""><hr></td>
+                               <td>:<input type="text" name="username" value=""><hr></td>
                            </tr>
 
                            <tr>
                                <td>Password</td>
-                               <td><input type="password" name="password" value=""><hr></td>
+                               <td>:<input type="password" name="password" value=""><hr></td>
                            </tr>
                           
                            
@@ -112,7 +112,7 @@
        
     </table>
 
-    <img src="../models/School.jpg" alt="A school logo" width="700" height="300">
+    <img src="../assets/School.jpg" alt="A school logo" width="700" height="300">
     
  </fieldset>
 </body>

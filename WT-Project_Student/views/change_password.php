@@ -69,7 +69,7 @@
             </tr>
             
         </table>
-        <img src="../models/School.jpg" alt="A school logo" width="700" height="300">
+        <img src="../assets/School.jpg" alt="A school logo" width="700" height="300">
     </fieldset>
     </body>
 

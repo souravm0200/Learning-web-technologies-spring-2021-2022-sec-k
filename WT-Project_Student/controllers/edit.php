@@ -42,10 +42,8 @@ $updatedContent .= $line;
 }
 
 
-
-
-
  }
+ 
  $file = fopen('../models/record.txt', 'a');
 fwrite($file, $updatedContent);
 header('location: ../views/profile.php');
