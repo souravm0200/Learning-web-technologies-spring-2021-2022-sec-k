@@ -1,4 +1,14 @@
+<?php
+$error ="";
+if(isset($_GET['msg']))
+{
+  if($_GET['msg'] == 'error')
+  {
+     $error = "in username/password";
+  }
+}
 
+?>
 <html>
 <head>
 	
@@ -39,7 +49,10 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name="submit" value="Log In"> <a href="forgetpass">Forget Password</a></td>
+				<td><input type="submit" name="submit" value="Log In"> <a href="forgetpass">Forget Password</a>
+                <br>
+                <?=$error?>
+				</td>
 			</tr>
 		
 		</table>                   

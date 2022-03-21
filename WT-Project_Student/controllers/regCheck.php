@@ -1,34 +1,70 @@
 <?php 
 	session_start();
-	
+	require_once('../models/db.php');
+
 	if(isset($_REQUEST['submit']))
 	{
-		
-        
-
 		$name = $_REQUEST['name'];
 		$email = $_REQUEST['email'];
 		$username = $_REQUEST['username'];
 		$password = $_REQUEST['password'];
 		$gender = $_REQUEST['gender'];
 		$dob = $_REQUEST['dob'];
-		
 
-    if($name != null && $email != null && $username !=null && $password != null && $gender != null && $dob != null)
+		if($name != "")
 		{
+			if($email != "")
+			{
+				if($username != "")
+				{
+					if($password != "")
+					{
+						if($gender != "")
+						{
+							if($dob != "")
+							{
 
 
-			$user =$name."|".$email."|".$username."|".$password."|".$gender."|".$dob."\r\n";
+                               $user = ['name'=> $name, 'email'=>$email, 'username'=>$username, 'password'=>$password ,'gender'=>$gender,'dob'=>$dob];
 
-			$file = fopen('../models/record.txt', 'a');
-			fwrite($file, $user);
-			fclose($file);
-			header('location: ../views/Login.php');
+					           $status = registration($user);
+					            if($status){
+						             	echo "try again...";				
+					            }	
+					            else{
+						            
+						            header('location: ../views/Login.php');
+					                }
+
+							}
+							else
+							{
+								echo "invalid Date of birth ...";
+							}
+                        }
+                      else
+                      {
+                      	echo "invaild gender...";
+                      }
+                   }
+                   else
+                   {
+                   	echo "invaild password...";
+                   }
+				}
+				else
+				{
+					echo "invalid username...";
+				}
+			}
+			else
+			{
+				echo "invalid email...";
+			}
 		}
 		else
 		{
-			echo "null submission";
-			
+			echo "invalid name...";
 		}
 	}
 ?>

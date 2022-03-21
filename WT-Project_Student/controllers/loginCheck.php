@@ -1,34 +1,35 @@
 <?php 
+	require_once('../models/db.php');
 	session_start();
 
-	if(isset($_REQUEST['submit'])){
-		
+	if(isset($_REQUEST['submit']))
+	{
 		$username = $_REQUEST['username'];
 		$password = $_REQUEST['password'];
 
-		if($username != null && $password != null){
-			
+		
 
-			$file = fopen('../models/record.txt', 'r');
-			while(!feof($file))
-			{
+	
+		if($username != ""){
+			if($password != ""){
 
-				$user = fgets($file);
-				$userArry = explode('|', $user);
-				
-				if(trim($userArry[2]) == $username && trim($userArry[3]) == $password){
+				$status = login($username, $password);
+                
+				if($status){
 					$_SESSION['status'] = true;
-					$_SESSION['current_user'] = $userArry;
-					setcookie('status', 'true', time()+3600, '/');
-
+                    setcookie('flag', 'true', time()+3600, '/');
 					header('location: ../views/Dashboard.php');
 				}
+				else{
+					header('location: ../views/Login.php?msg=error');	
+				}
+
+			}else{
+				echo "invalid password...";
 			}
-
-			echo "invalid username/password";
-
 		}else{
-			echo "null submission";
+			echo "invalid username...";
 		}
 	}
+
 ?>
